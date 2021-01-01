@@ -6,12 +6,14 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:compat/recommended',
     'plugin:jest/recommended',
+    'plugin:react-hooks/recommended',
     '.eslintrc.rules'
   ],
   'plugins': [
     'react',
     'sonarjs',
-    'jest'
+    'jest',
+    'react-hooks'
   ],
   'settings': {
     react: {
