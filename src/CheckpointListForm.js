@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import CheckpointForm from './CheckPointForm';
 
 export default function CheckpointListForm(props) {
   const [title, setTitle] = useState('');
@@ -16,8 +17,7 @@ export default function CheckpointListForm(props) {
       <h1>Create list</h1>
       <Form className='CheckpointListForm' onSubmit={submited}>
         <Form.Control placeholder='Title' maxLength='20' value={title} onChange={e => setTitle(e.target.value)} name='title'></Form.Control>
-        <Form.Control placeholder='Insert checkpoint' maxLength='40'
-          value={checkpoint} onChange={e => setCheckpoint(e.target.value)} name='checkpoint'></Form.Control>
+        <CheckpointForm checkpointId='1' onChange={setCheckpoint}/>
         <Button type='submit'>Done</Button>
       </Form>
     </div>
