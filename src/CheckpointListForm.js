@@ -5,11 +5,19 @@ import CheckpointForm from './CheckPointForm';
 
 export default function CheckpointListForm(props) {
   const [title, setTitle] = useState('');
-  const [checkpoint, setCheckpoint] = useState('');
+  const [checkpoints, setCheckpoints] = useState({});
 
   function submited(e) {
     e.preventDefault();
-    props.onSubmit(title, checkpoint);
+    props.onSubmit(title, checkpoints);
+  }
+
+  function onChange(id, editedCheckpoint) {
+    let newCheckpoints = { ...checkpoints };
+
+    newCheckpoints[id] = editedCheckpoint;
+
+    setCheckpoints(newCheckpoints);
   }
 
   return (
@@ -17,7 +25,8 @@ export default function CheckpointListForm(props) {
       <h1>Create list</h1>
       <Form className='CheckpointListForm' onSubmit={submited}>
         <Form.Control placeholder='Title' maxLength='20' value={title} onChange={e => setTitle(e.target.value)} name='title'></Form.Control>
-        <CheckpointForm checkpointId='1' onChange={setCheckpoint}/>
+        <CheckpointForm checkpointId='0' onChange={onChange}/>
+        <CheckpointForm checkpointId='1' onChange={onChange}/>
         <Button type='submit'>Done</Button>
       </Form>
     </div>

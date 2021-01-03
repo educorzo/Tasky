@@ -10,16 +10,18 @@ describe('Planner', () => {
         render(<Planner />);
 
         const titleInput = screen.getByPlaceholderText('Title');
-        const checkpointInput = screen.getByPlaceholderText('Insert checkpoint');
+        const checkpointInput = screen.getAllByPlaceholderText('Insert checkpoint');
         const submitButton = screen.getByRole('button');
 
         userEvent.type(titleInput, 'Prepare pizza');
-        userEvent.type(checkpointInput, 'Buy fresh yeast');
+        userEvent.type(checkpointInput[0], 'Buy fresh yeast');
+        userEvent.type(checkpointInput[1], 'Check wood');
 
         userEvent.click(submitButton);
 
         expect(screen.getByText('Prepare pizza')).toBeDefined();
         expect(screen.getByText('Buy fresh yeast')).toBeDefined();
+        expect(screen.getByText('Check wood')).toBeDefined();
       });
     });
   });

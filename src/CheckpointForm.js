@@ -7,7 +7,7 @@ export default function CheckpointForm(props) {
 
   function onChange(e) {
     setCheckpoint(e.target.value);
-    props.onChange(e.target.value);
+    props.onChange(props.checkpointId, e.target.value);
   }
 
   return (
