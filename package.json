@@ -39,8 +39,7 @@
     "build": "webpack --config webpack.config.dev.js",
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "lint": "eslint ./",
-    "test": "jest --watch --runInBand",
-    "testCI": "jest"
+    "test": "jest --watch --runInBand"
   },
   "eslintConfig": {
     "extends": [
