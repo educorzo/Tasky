@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import CheckpointForm from './CheckPointForm.js';
+import CheckpointForm from './CheckpointForm.js';
 
 export default function CheckpointListForm(props) {
   const [title, setTitle] = useState('');
