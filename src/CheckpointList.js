@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Checkpoint from './Checkpoint.js';
 
 export default function CheckpointList(props) {
   let checkpoints = [];
@@ -7,7 +8,7 @@ export default function CheckpointList(props) {
 
   for (checkpointId in props.checkpoints) {
     if (Object.prototype.hasOwnProperty.call(props.checkpoints, checkpointId)) {
-      checkpoints.push(<h2 key={checkpointId}>{props.checkpoints[checkpointId]}</h2>);
+      checkpoints.push(<Checkpoint key={checkpointId} checkpointId={checkpointId} title={props.checkpoints[checkpointId]} />);
     }
   }
 
