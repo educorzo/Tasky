@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Check } from 'react-bootstrap-icons';
 
 export default function Checkpoint(props) {
+  let [marked, setMarked] = useState(false);
+  let [color, setColor] = useState('grey');
+
+  function changeStatus() {
+    if (!marked) {
+      setColor('green');
+    } else {
+      setColor('grey');
+    }
+
+    setMarked(!marked);
+  }
+
   return (
     <div>
-      <h2 key={props.checkpointId}>{props.title}</h2>
-      <svg className='bi bi-alert-triangle text-success' width='32' height='32'
-        viewBox='0 0 20 20' fill='currentColor' xmlns='http://www.w3.org/2000/svg' />
+      <h2 key={props.checkpointId} className='d-inline'>{props.title}</h2>
+      <Check color={color} size={90} title='check' className='d-inline' onClick={changeStatus}/>
     </div>
   );
 }
