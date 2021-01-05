@@ -3,21 +3,21 @@ import { Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import CheckpointForm from './CheckpointForm.js';
 
-export function createInputs(checkpoints, onChange) {
+export function createCheckpointForms(checkpoints, onChange) {
   let checkpointId,
-    forms = [];
+    checkpointforms = [];
 
   for (checkpointId in checkpoints) {
     if (Object.prototype.hasOwnProperty.call(checkpoints, checkpointId)) {
-      forms.push(<CheckpointForm key= {checkpointId} checkpointId={checkpointId} onChange={onChange}/>);
+      checkpointforms.push(<CheckpointForm key= {checkpointId} checkpointId={checkpointId} onChange={onChange}/>);
     }
   }
   
   if (checkpoints[checkpointId] !== '') {
-    forms.push(<CheckpointForm key= {checkpointId + 1} checkpointId={checkpointId + 1} onChange={onChange}/>);
+    checkpointforms.push(<CheckpointForm key= {checkpointId + 1} checkpointId={checkpointId + 1} onChange={onChange}/>);
   }
 
-  return forms;
+  return checkpointforms;
 }
 
 export default function CheckpointListForm(props) {
@@ -37,7 +37,7 @@ export default function CheckpointListForm(props) {
     setCheckpoints(newCheckpoints);
   }
 
-  let checkpointForms = createInputs(checkpoints, onChange);
+  let checkpointForms = createCheckpointForms(checkpoints, onChange);
 
   return (
     <div>
