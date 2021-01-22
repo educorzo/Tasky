@@ -1,3 +1,7 @@
+:root {
+  --primary: #4B6899 !important; 
+}
+
 .App {
   text-align: center;
 }
@@ -11,4 +15,29 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Planner {
+  border-radius: 0.5rem;
+  background-color:#E6A17C;
+}
+
+.btn-primary {
+  background-color: #349995;
+  border-color: #349995;
+}
+
+.btn-primary.active, 
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #4B6899 !important;
+  border-color: #4B6899 !important;
+}
+
+.btn-primary:active:focus {
+  color: #ffffff; 
+  background-color: #4B6899 !important;
+  border-color: #4B6899 !important;
 }

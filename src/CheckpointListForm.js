@@ -9,12 +9,12 @@ export function createCheckpointForms(checkpoints, onChange) {
 
   for (checkpointId in checkpoints) {
     if (Object.prototype.hasOwnProperty.call(checkpoints, checkpointId)) {
-      checkpointforms.push(<CheckpointForm key= {checkpointId} checkpointId={checkpointId} onChange={onChange}/>);
+      checkpointforms.push(<CheckpointForm key={checkpointId} checkpointId={checkpointId} onChange={onChange} />);
     }
   }
-  
+
   if (checkpoints[checkpointId] !== '') {
-    checkpointforms.push(<CheckpointForm key= {checkpointId + 1} checkpointId={checkpointId + 1} onChange={onChange}/>);
+    checkpointforms.push(<CheckpointForm key={checkpointId + 1} checkpointId={checkpointId + 1} onChange={onChange} />);
   }
 
   return checkpointforms;
@@ -33,7 +33,7 @@ export default function CheckpointListForm(props) {
     let newCheckpoints = { ...checkpoints };
 
     newCheckpoints[id] = editedCheckpoint;
-    
+
     setCheckpoints(newCheckpoints);
   }
 
@@ -43,9 +43,12 @@ export default function CheckpointListForm(props) {
     <div>
       <h1>Create list</h1>
       <Form className='CheckpointListForm' onSubmit={submited}>
-        <Form.Control placeholder='Title' maxLength='20' value={title} onChange={e => setTitle(e.target.value)} name='title'></Form.Control>
+        <div className='mb-3'>
+          <Form.Control size='lg' placeholder='Title' maxLength='20' value={title}
+            onChange={e => setTitle(e.target.value)} name='title'></Form.Control>
+        </div>
         {checkpointForms}
-        <Button type='submit'>Done</Button>
+        <Button className='mb-3' type='submit'>Done</Button>
       </Form>
     </div>
   );

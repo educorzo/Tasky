@@ -6,7 +6,13 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Planner/>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-sm-4'>
+              <Planner/>
+            </div>
+          </div>
+        </div>
       </header>
     </div>
   );

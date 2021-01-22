@@ -14,7 +14,7 @@ export default function Planner() {
   }
 
   return (
-    <div>
+    <div className='container Planner'>
       {done ? (<CheckpointList title={title} checkpoints={checkpoints}/>) : (<CheckpointListForm onSubmit={onSubmit}/>)}
     </div>
   );
