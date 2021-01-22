@@ -11,8 +11,10 @@ export default function CheckpointForm(props) {
   }
 
   return (
-    <Form.Control placeholder='Insert checkpoint' maxLength='40'
-      value={checkpoint} onChange={onChange} name={props.checkpointId}/>
+    <div className='mb-3'>
+      <Form.Control placeholder='Insert checkpoint' maxLength='40'
+        value={checkpoint} onChange={onChange} name={props.checkpointId}/>
+    </div>
   );
 }
 
