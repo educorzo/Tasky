@@ -7,7 +7,7 @@ export default function CheckpointList(props) {
   let checkpointId;
 
   for (checkpointId in props.checkpoints) {
-    if (Object.prototype.hasOwnProperty.call(props.checkpoints, checkpointId)) {
+    if (Object.prototype.hasOwnProperty.call(props.checkpoints, checkpointId) && props.checkpoints[checkpointId] !== '') {
       checkpoints.push(<Checkpoint key={checkpointId} checkpointId={checkpointId} title={props.checkpoints[checkpointId]} />);
     }
   }
