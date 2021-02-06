@@ -8,7 +8,7 @@ function App() {
       <header className='App-header'>
         <div className='container'>
           <div className='row'>
-            <div className='col-sm-4'>
+            <div className='col-sm-6'>
               <Planner/>
             </div>
           </div>

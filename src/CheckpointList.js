@@ -14,13 +14,11 @@ export default function CheckpointList(props) {
 
   return (
     <div>
-      <h1>{props.title}</h1>
       {checkpoints}
     </div>
   );
 }
 
 CheckpointList.propTypes = {
-  title: PropTypes.string.isRequired,
   checkpoints: PropTypes.object.isRequired
 };
