@@ -9,20 +9,22 @@ export function createCheckpointForms(checkpoints, onChange) {
 
   for (checkpointId in checkpoints) {
     if (Object.prototype.hasOwnProperty.call(checkpoints, checkpointId)) {
-      checkpointforms.push(<CheckpointForm key= {checkpointId} checkpointId={checkpointId} onChange={onChange}/>);
+      checkpointforms.push(<CheckpointForm key= {checkpointId}
+        checkpointId={checkpointId} checkpointValue={checkpoints[checkpointId]} onChange={onChange}/>);
     }
   }
 
   if (checkpoints[checkpointId] !== '') {
-    checkpointforms.push(<CheckpointForm key= {checkpointId + 1} checkpointId={checkpointId + 1} onChange={onChange}/>);
+    checkpointforms.push(<CheckpointForm key= {checkpointId + 1}
+      checkpointId={checkpointId + 1} checkpointValue={''} onChange={onChange}/>);
   }
 
   return checkpointforms;
 }
 
 export default function CheckpointListForm(props) {
-  const [title, setTitle] = useState('');
-  const [checkpoints, setCheckpoints] = useState({ 0: '', 1: '' });
+  const [title, setTitle] = useState(props.title);
+  const [checkpoints, setCheckpoints] = useState(props.checkpoints);
 
   function submited(e) {
     e.preventDefault();
@@ -54,5 +56,7 @@ export default function CheckpointListForm(props) {
 }
 
 CheckpointListForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  checkpoints: PropTypes.object.isRequired
 };

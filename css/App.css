@@ -22,7 +22,7 @@
   background-color:#E6A17C;
 }
 
-.Checkpoint {
+.Checkpoint, .CheckpointListHeader {
   display: flex;
   justify-content: center;
   align-items: center;

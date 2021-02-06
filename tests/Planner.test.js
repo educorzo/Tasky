@@ -5,8 +5,8 @@ import Planner from '../src/Planner';
 
 describe('Planner', () => {
   describe('when creating a new list', () => {
-    describe('and submit the list', () => {
-      test('should appear the list', () => {
+    describe('and the list is submitted,', () => {
+      test('the list is ready for use', () => {
         render(<Planner />);
 
         const titleInput = screen.getByPlaceholderText('Title');
