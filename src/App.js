@@ -1,6 +1,7 @@
 import '../css/App.css';
 import React from 'react';
 import Planner from './Planner';
+import EmptyPlanner from './EmptyPlanner';
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
           <div className='row'>
             <div className='col-sm-6'>
               <Planner/>
+            </div>
+            <div className='col-sm-6'>
+              <EmptyPlanner/>
             </div>
           </div>
         </div>
