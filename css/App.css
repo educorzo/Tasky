@@ -22,6 +22,16 @@
   background-color:#E6A17C;
 }
 
+.EmptyPlanner {
+  border-radius: 0.5rem;
+  border-color:#E6A17C;
+  border-style: dashed;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Checkpoint, .CheckpointListHeader {
   display: flex;
   justify-content: center;
