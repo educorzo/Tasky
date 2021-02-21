@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Planner from '../src/Planner';
+import Planner from '../../src/components/Planner';
 
 describe('Planner', () => {
   describe('when creating a new list', () => {

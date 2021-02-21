@@ -1,0 +1,59 @@
+:root {
+  --primary: #4B6899 !important; 
+}
+
+.Dashboard {
+  text-align: center;
+}
+
+.Dashboard-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Planner {
+  border-radius: 0.5rem;
+  background-color:#E6A17C;
+}
+
+.EmptyPlanner {
+  border-radius: 0.5rem;
+  border-color:#E6A17C;
+  border-style: dashed;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Checkpoint, .CheckpointListHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #349995;
+  border-color: #349995;
+}
+
+.btn-primary.active, 
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #4B6899 !important;
+  border-color: #4B6899 !important;
+}
+
+.btn-primary:active:focus {
+  color: #ffffff; 
+  background-color: #4B6899 !important;
+  border-color: #4B6899 !important;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import CheckpointList from '../src/CheckpointList';
+import CheckpointList from '../../src/components/CheckpointList';
 
 test('Empty checkpoints are not shown', () => {
   let checkpointList = {

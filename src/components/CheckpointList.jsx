@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Checkpoint from './Checkpoint.js';
+import Checkpoint from './Checkpoint';
 
 export default function CheckpointList(props) {
   let checkpoints = [];
