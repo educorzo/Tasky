@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-export default function CheckpointForm(props) {
+export default function CheckpointInput(props) {
   const [checkpoint, setCheckpoint] = useState(props.checkpointValue);
 
   function onChange(e) {
@@ -18,7 +18,7 @@ export default function CheckpointForm(props) {
   );
 }
 
-CheckpointForm.propTypes = {
+CheckpointInput.propTypes = {
   checkpointId: PropTypes.string.isRequired,
   checkpointValue: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired

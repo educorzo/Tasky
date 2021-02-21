@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from '../src/App';
+import Dashboard from '../../src/components/Dashboard';
 
 test('renders a form to create list', () => {
-  render(<App />);
+  render(<Dashboard />);
   const linkElement = screen.getByText('Create list');
   expect(linkElement).toBeInTheDocument();
 });

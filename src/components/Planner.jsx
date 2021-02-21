@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import CheckpointList from './CheckpointList.js';
-import CheckpointListForm from './edit/CheckpointListForm.js';
-import CheckpointListHeader from './CheckpointListHeader.js';
+import CheckpointList from './CheckpointList';
+import CheckpointListForm from './CheckpointListForm';
+import CheckpointListHeader from './CheckpointListHeader';
 
 export default function Planner() {
   const [editMode, setEditMode] = useState(false);

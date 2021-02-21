@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import CheckpointListForm from '../../src/edit/CheckpointListForm';
+import CheckpointListForm from '../../src/components/CheckpointListForm';
 import userEvent from '@testing-library/user-event';
 
 describe('Adding the last input', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Planner from '../../src/Planner';
+import Planner from '../../src/components/Planner';
 import userEvent from '@testing-library/user-event';
 
 describe('When edit button is clicked', () => {

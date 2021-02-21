@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Checkpoint from '../src/Checkpoint';
+import Checkpoint from '../../src/components/Checkpoint';
 import userEvent from '@testing-library/user-event';
 
 test('renders checkpoint as uncompleted', () => {
