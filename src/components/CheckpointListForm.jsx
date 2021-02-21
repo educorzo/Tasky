@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import CheckpointForm from './CheckpointForm';
+import CheckpointForm from './CheckpointInput';
 
-export function createCheckpointForms(checkpoints, onChange) {
+export function createCheckpointInputs(checkpoints, onChange) {
   let checkpointId,
-    checkpointforms = [];
+    checkpointInputs = [];
 
   for (checkpointId in checkpoints) {
     if (Object.prototype.hasOwnProperty.call(checkpoints, checkpointId)) {
-      checkpointforms.push(<CheckpointForm key= {checkpointId}
+      checkpointInputs.push(<CheckpointForm key= {checkpointId}
         checkpointId={checkpointId} checkpointValue={checkpoints[checkpointId]} onChange={onChange}/>);
     }
   }
 
   if (checkpoints[checkpointId] !== '') {
-    checkpointforms.push(<CheckpointForm key= {checkpointId + 1}
+    checkpointInputs.push(<CheckpointForm key= {checkpointId + 1}
       checkpointId={checkpointId + 1} checkpointValue={''} onChange={onChange}/>);
   }
 
-  return checkpointforms;
+  return checkpointInputs;
 }
 
 export default function CheckpointListForm(props) {
@@ -39,7 +39,7 @@ export default function CheckpointListForm(props) {
     setCheckpoints(newCheckpoints);
   }
 
-  let checkpointForms = createCheckpointForms(checkpoints, onChange);
+  let checkpointInputs = createCheckpointInputs(checkpoints, onChange);
 
   return (
     <div>
@@ -48,7 +48,7 @@ export default function CheckpointListForm(props) {
         <div className='mb-3'>
           <Form.Control placeholder='Title' maxLength='20' value={title} onChange={e => setTitle(e.target.value)} name='title'></Form.Control>
         </div>
-        {checkpointForms}
+        {checkpointInputs}
         <Button className='mb-3' type='submit'>Done</Button>
       </Form>
     </div>
